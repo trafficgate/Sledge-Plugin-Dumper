@@ -42,3 +42,43 @@ sub import {
 }
 
 1;
+
+__END__
+
+=head1 NAME
+
+Sledge::Plugin::Dumper - Data::Dumper wrapper
+
+=head1 SYNOPSIS
+
+
+  package Test::Pages;
+  use Sledge::Plugin::Dumper;
+
+  sub dispatch_foo {
+      my $self = shift;
+      $self->dumper($something);
+  }
+
+  # combination with Plugin::Log
+  use Sledge::Plugin::Dumper level => 'warning', to => 'syslog';
+
+=head1 DESCRIPTION
+
+C<Data::Dumper> を use して、 C<warn Dumper> を実行するのがメンドウな
+人向けのプラグインです。
+
+=head1 USING WITH LOGGER
+
+Plugin::Log と併用すると、出力先をカスタマイズすることができます。デフォ
+ルトは debug レベルですべてのロガーに出力します。
+
+=head1 AUTHOR
+
+Tatsuhiko Miyagawa <miyagawa@edge.co.jp> with Sledge development team.
+
+=head1 SEE ALSO
+
+L<Data::Dumper>, L<Sledge::Plugin::Log>
+
+=cut
