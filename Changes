@@ -1,0 +1,13 @@
+Revision history for Perl extension Sledge::Plugin::Dumper
+
+0.03  Thu Jan 23 19:43:23 JST 2003
+	* Added file and line number on warnings
+
+0.02  Thu Jan 31 22:52:12 JST 2002
+	* Added Indent level configuration support
+	  (Thanks to ikebe)
+	* Added Logger name/level support
+	  (Thanks to ikebe)
+
+0.01  Tue Jan  8 18:43:19 2002
+	- original version
